@@ -13,7 +13,7 @@ function init() {
 	tl.from(".plan-footer__contact", { x: -350, y: -120 }, "=")
 	tl.from(".plan-shape", { x: "-200%", y: -1200 }, "-= 0.5")
 	tl.from(".plan-expand__shape .shape", { x: -450, y: "-20%" }, "-=.9")
-	tl.from(".plan-expand__block .heading", { y: "-100%" }, "=")
+	// tl.from(".plan-expand__block .heading", { y: "-100%" }, "=")
 	tl.from(".contact-shape", { x: -240, y: -360, duration: 1.3 }, "=")
 }
 
@@ -22,11 +22,11 @@ function init() {
 document.addEventListener("DOMContentLoaded", function () {
 	// Initalization animation
 	init()
-	if (document.querySelector("blockquote")) {
+	if (document.querySelector(".plan-expand__block")) {
 		AOS.init({
 			once: true,
-			offset: 0,
-			delay: 5,
+			offset: "-450",
+			delay: 1,
 			mirror: false,
 			duration: 1200,
 			anchorPlacement: "top-center",
