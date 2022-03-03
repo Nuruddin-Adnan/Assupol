@@ -1,0 +1,625 @@
+.plan {
+	z-index: 1;
+	color: #fff;
+	overflow: hidden;
+	position: relative;
+
+	&-content {
+		// height: 100vh;
+		padding: 150px 0px;
+		padding-bottom: 180px;
+		@include max(1680px) {
+			padding-bottom: 150px;
+		}
+		@include max(991px) {
+			height: 100%;
+			padding-top: 240px;
+			padding-bottom: 60px;
+		}
+	}
+
+	&-heading {
+		margin-bottom: 60px;
+		@include max(991px) {
+			margin-bottom: 40px;
+		}
+		h2 {
+			color: $primary;
+			font-size: 60px;
+			line-height: 62px;
+			font-weight: 900;
+			position: relative;
+			margin-bottom: 40px;
+			display: inline-block;
+			text-transform: uppercase;
+			@include max(991px) {
+				font-size: 28px;
+				line-height: 36px;
+				margin-bottom: 12px;
+			}
+			&::after {
+				content: "";
+				right: -20px;
+				top: 50%;
+				width: 10px;
+				height: calc(100% - 16px);
+				position: absolute;
+				background-color: #fff;
+				transform: translateY(-50%);
+				@include max(991px) {
+					width: 6px;
+				}
+			}
+		}
+		blockquote {
+			width: 695px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			@include max(991px) {
+				width: 100%;
+			}
+			p {
+				font-size: 20px;
+				line-height: 32px;
+				@include max(991px) {
+					font-size: 12px;
+					line-height: 19px;
+				}
+			}
+		}
+
+		a {
+			color: $primary;
+			font-size: 20px;
+			line-height: 32px;
+			font-weight: 300;
+			text-decoration: underline;
+			@include max(991px) {
+				font-size: 12px;
+				line-height: 19px;
+			}
+		}
+	}
+
+	&-footer {
+		width: 475px;
+		@include max(991px) {
+			width: 100%;
+		}
+		&__contact {
+			margin-bottom: 80px;
+			@include max(991px) {
+				margin-bottom: 24px;
+			}
+			h2 {
+				color: $primary;
+				font-size: 28px;
+				line-height: 28px;
+				font-weight: 900;
+				text-transform: uppercase;
+				@include max(991px) {
+					font-size: 18px;
+					line-height: 13px;
+				}
+				span {
+					color: #fff;
+					font-size: 24px;
+					line-height: 28px;
+					font-weight: 300;
+					text-transform: capitalize;
+					@include max(991px) {
+						font-size: 14px;
+					}
+				}
+
+				a {
+					color: $primary;
+					font-weight: 700;
+					text-transform: lowercase;
+				}
+			}
+			p {
+				font-size: 24px;
+				font-weight: 300;
+				line-height: 28px;
+				text-transform: lowercase;
+				@include max(991px) {
+					font-size: 16px;
+					line-height: 13px;
+				}
+				small {
+					font-weight: 900;
+				}
+			}
+		}
+	}
+
+	&-navi {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include max(991px) {
+			width: 380px;
+		}
+		@include max(575px) {
+			width: 100%;
+		}
+
+		a {
+			color: #fff;
+			font-size: 25px;
+			line-height: 62px;
+			font-weight: 600;
+			position: relative;
+			text-transform: uppercase;
+
+			@include max(991px) {
+				font-size: 16px;
+				line-height: 24px;
+			}
+
+			&:hover {
+				&:nth-child(1) {
+					&::before {
+						transform: rotate(270deg);
+						@include max(991px) {
+							transform: rotate(180deg);
+						}
+					}
+				}
+
+				&:nth-last-child(1) {
+					&::before {
+						transform: translateX(-2px) rotate(90deg);
+					}
+					small {
+						font-size: 0px;
+					}
+					p {
+						font-size: 25px;
+						@include max(991px) {
+							font-size: 16px;
+						}
+					}
+				}
+			}
+			&:nth-child(1) {
+				margin-left: 40px;
+				&::before {
+					content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49.9' height='29.9' viewBox='0 0 49.9 29.9'%3E%3Cg id='Icon_Arrow_Down' data-name='Icon / Arrow / Down' transform='translate(44.95 24.95) rotate(180)'%3E%3Cpath id='Path_17' data-name='Path 17' d='M20,40,0,20,20,0' transform='translate(0 20) rotate(-90)' fill='none' stroke='%23db000c' stroke-linecap='round' stroke-miterlimit='10' stroke-width='7'/%3E%3C/g%3E%3C/svg%3E%0A");
+					left: -60px;
+					position: absolute;
+					transition: all 0.3s ease;
+					transform: rotate(90deg);
+					@include max(991px) {
+						content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.775' height='26.479' viewBox='0 0 16.775 26.479'%3E%3Cg id='Icon_Arrow_Down' data-name='Icon / Arrow / Down' transform='translate(3.536 22.944) rotate(-90)'%3E%3Cpath id='Path_17' data-name='Path 17' d='M9.7,19.408,0,9.7,9.7,0' transform='translate(0 9.704) rotate(-90)' fill='none' stroke='%23db000c' stroke-linecap='round' stroke-miterlimit='10' stroke-width='5'/%3E%3C/g%3E%3C/svg%3E%0A");
+						transform: rotate(0deg);
+						top: -4px;
+						left: -30px;
+					}
+				}
+			}
+
+			&:nth-last-child(1) {
+				&::before {
+					content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49.9' height='29.9' viewBox='0 0 49.9 29.9'%3E%3Cg id='Icon_Arrow_Down' data-name='Icon / Arrow / Down' transform='translate(44.95 24.95) rotate(180)'%3E%3Cpath id='Path_17' data-name='Path 17' d='M20,40,0,20,20,0' transform='translate(0 20) rotate(-90)' fill='none' stroke='%23db000c' stroke-linecap='round' stroke-miterlimit='10' stroke-width='7'/%3E%3C/g%3E%3C/svg%3E%0A");
+					left: -60px;
+					position: absolute;
+					transition: all 0.3s ease;
+					transform: translateX(0px) rotate(90deg);
+					@include max(991px) {
+						content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.775' height='26.479' viewBox='0 0 16.775 26.479'%3E%3Cg id='Icon_Arrow_Down' data-name='Icon / Arrow / Down' transform='translate(3.536 22.944) rotate(-90)'%3E%3Cpath id='Path_17' data-name='Path 17' d='M9.7,19.408,0,9.7,9.7,0' transform='translate(0 9.704) rotate(-90)' fill='none' stroke='%23db000c' stroke-linecap='round' stroke-miterlimit='10' stroke-width='5'/%3E%3C/g%3E%3C/svg%3E%0A");
+						transform: rotate(0deg);
+						top: -4px;
+						left: -28px;
+					}
+				}
+
+				p {
+					display: flex;
+					align-items: center;
+					width: 60px;
+					font-size: 0px;
+					transition: all 0.3s ease;
+					@include max(991px) {
+					}
+					small {
+						font-size: 25px;
+						transition: all 0.3s ease;
+						@include max(991px) {
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-shape {
+		z-index: -1;
+		overflow: hidden;
+		position: absolute;
+		border-radius: 50%;
+
+		&--one,
+		&--two,
+		&--three,
+		&--four {
+			user-select: none;
+			pointer-events: none;
+			// transition: all 0.3s ease-in;
+		}
+
+		&--one {
+			top: 100%;
+			right: -10%;
+			width: 1200px;
+			height: 1200px;
+			transform: translateY(-50%);
+
+			@include max(1580px) {
+				width: 920px;
+				height: 920px;
+				transform: translateY(-80%);
+			}
+
+			@include max(1440px) {
+				width: 800px;
+				height: 800px;
+				transform: translateY(-60%);
+			}
+			@include max(1200px) {
+				width: 620px;
+				height: 620px;
+			}
+
+			@include max(991px) {
+				top: -20%;
+				width: 380px;
+				height: 380px;
+				transform: translateY(0);
+			}
+			@include max(767px) {
+				top: -15%;
+				width: 320px;
+				height: 320px;
+			}
+		}
+
+		&--two {
+			top: -15%;
+			right: -5%;
+			width: 900px;
+			height: 900px;
+			border-radius: 50% 0 50% 50%;
+			@include max(1580px) {
+				width: 680px;
+				height: 680px;
+			}
+			@include max(1440px) {
+				width: 580px;
+				height: 580px;
+			}
+			@include max(1200px) {
+				width: 460px;
+				height: 460px;
+			}
+
+			@include max(991px) {
+				top: -20%;
+				width: 380px;
+				height: 380px;
+				border-radius: 50%;
+			}
+			@include max(767px) {
+				top: -10%;
+				width: 300px;
+				height: 300px;
+			}
+		}
+
+		&--three {
+			right: 0px;
+			width: 820px;
+			height: 820px;
+			bottom: calc(0% - 60px);
+			border-radius: 100% 0% 0% 0%;
+			@include max(1440px) {
+				width: 620px;
+				height: 620px;
+			}
+			@include max(1200px) {
+				width: 480px;
+				height: 480px;
+			}
+			@include max(991px) {
+				top: -20%;
+				width: 380px;
+				height: 380px;
+				border-radius: 50%;
+			}
+			@include max(767px) {
+				top: -10%;
+				width: 300px;
+				height: 300px;
+			}
+		}
+
+		&--four {
+			top: 100%;
+			right: -10%;
+			width: 1100px;
+			height: 1100px;
+			transform: translateY(-50%);
+
+			@include max(1580px) {
+				width: 920px;
+				height: 920px;
+				transform: translateY(-80%);
+			}
+
+			@include max(1440px) {
+				width: 680px;
+				height: 680px;
+			}
+			@include max(1200px) {
+				width: 620px;
+				height: 620px;
+			}
+			@include max(991px) {
+				top: -20%;
+				width: 380px;
+				height: 380px;
+				transform: translateY(0);
+			}
+			@include max(767px) {
+				top: -10%;
+				right: -5%;
+				width: 300px;
+				height: 300px;
+			}
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&-expand {
+		.plan {
+			&-content {
+				padding: 120px 0px;
+				padding-bottom: 60px;
+				@include max(991px) {
+					padding-top: 240px;
+				}
+
+				&--one {
+					@include max(991px) {
+						padding-top: 380px;
+					}
+					@include max(767px) {
+						padding-top: 280px;
+					}
+				}
+
+				&--four {
+					@include max(991px) {
+						padding-top: 440px;
+					}
+					@include max(767px) {
+						padding-top: 320px;
+					}
+				}
+
+				&--five {
+					@include max(480px) {
+						padding-top: 190px;
+					}
+				}
+			}
+			&-heading {
+				margin-bottom: 40px;
+				@include max(767px) {
+					margin-bottom: 24px;
+				}
+				h2,
+				p {
+					font-size: 50px;
+					line-height: 62px;
+					@include max(767px) {
+						font-size: 28px;
+						line-height: 36px;
+					}
+				}
+				h2 {
+					margin: 0;
+				}
+				p {
+					color: #fff;
+					font-weight: 900;
+					text-transform: capitalize;
+				}
+			}
+
+			&-footer {
+				width: 100%;
+
+				&__contact {
+					margin-bottom: 48px;
+				}
+			}
+
+			&-expand__block {
+				margin-bottom: 40px;
+				@include max(767px) {
+					margin-bottom: 24px;
+				}
+				.heading {
+					margin-bottom: 6px;
+					@include max(767px) {
+						margin-bottom: 12px;
+					}
+					h2 {
+						color: #fff;
+						font-size: 24px;
+						font-weight: 600;
+						line-height: 62px;
+						display: flex;
+						align-items: center;
+
+						@include max(767px) {
+							font-size: 18px;
+							line-height: 22px;
+						}
+						span {
+							margin-right: 8px;
+							flex-shrink: 0;
+							@include max(767px) {
+								height: 60px;
+								display: inline-block;
+								img {
+									width: 100%;
+									height: 100%;
+									object-fit: cover;
+								}
+							}
+							@include max(575px) {
+								height: 42px;
+							}
+						}
+					}
+				}
+				.subheading {
+					font-size: 22px;
+					font-weight: 700;
+					line-height: 32px;
+					margin-bottom: 20px;
+					@include max(767px) {
+						font-size: 14px;
+						line-height: 24px;
+						margin-bottom: 12px;
+					}
+				}
+				blockquote {
+					margin-bottom: 30px;
+
+					@include max(767px) {
+						margin-bottom: 12px;
+					}
+					ul {
+						padding-left: 24px;
+						margin-bottom: 28px;
+						li {
+							color: #fff;
+							list-style: circle;
+						}
+						&.number-list {
+							li {
+								list-style: decimal;
+							}
+						}
+						&.alpha-list {
+							li {
+								list-style: lower-alpha;
+							}
+						}
+					}
+
+					h2 {
+						color: #fff;
+						font-size: 20px;
+						line-height: 32px;
+						font-weight: 700;
+						margin-bottom: 30px;
+						@include max(991px) {
+							margin-bottom: 12px;
+						}
+						@include max(767px) {
+							font-size: 14px;
+							line-height: 18px;
+							margin-bottom: 8px;
+						}
+					}
+
+					p {
+						font-size: 20px;
+						line-height: 32px;
+
+						@include max(767px) {
+							font-size: 12px;
+							line-height: 18px;
+						}
+						span {
+							font-weight: 700;
+						}
+						a {
+							color: #fff;
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+
+			&-navi {
+				@include max(767px) {
+					width: 100%;
+				}
+			}
+		}
+
+		&__shape {
+			height: 700px;
+			@include max(1440px) {
+				height: 420px;
+			}
+			@include max(991px) {
+				height: 0px;
+			}
+			.shape {
+				top: -5%;
+				right: -10%;
+				width: 1020px;
+				height: 1020px;
+				overflow: hidden;
+				border-radius: 50%;
+				position: absolute;
+				z-index: -1;
+
+				@include max(1580px) {
+					width: 920px;
+					height: 920px;
+				}
+
+				@include max(1440px) {
+					width: 680px;
+					height: 680px;
+				}
+
+				@include max(991px) {
+					width: 100%;
+				}
+				@include max(767px) {
+					width: 100%;
+					height: 420px;
+				}
+
+				&-one {
+					@include max(380px) {
+						width: 110%;
+					}
+				}
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+}

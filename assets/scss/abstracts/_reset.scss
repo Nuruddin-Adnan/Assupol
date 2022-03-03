@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol,
+li,
+blockquote {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+}
+
+a {
+	position: relative;
+	text-decoration: none;
+	&:hover,
+	&:active,
+	&:focus {
+		outline: none;
+		box-shadow: none;
+		text-decoration: none;
+	}
+}
+
+button {
+	position: relative;
+	display: inline-block;
+	background-color: transparent;
+	overflow: hidden;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+body {
+	font-weight: 400;
+	font-family: "Work Sans", sans-serif;
+}

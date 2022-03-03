@@ -1,0 +1,32 @@
+.audio-player {
+	background: transparent;
+
+	.stream {
+		padding: 0px;
+	}
+
+	.controls {
+		background-color: transparent;
+	}
+
+	.mute {
+		display: none;
+	}
+
+	.slider {
+		.buffer {
+			background-color: transparent;
+		}
+		.backside {
+			background-color: #dbe2ea;
+		}
+		.complete {
+			background-color: $primary !important;
+		}
+		.marker {
+			width: 18px;
+			height: 18px;
+			background-color: #fff !important;
+		}
+	}
+}

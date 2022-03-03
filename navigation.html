@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assupol | navigation</title>
+        <!-- fonts  -->
+        <link rel="shortcut icon" href="assets/images/favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet" />
+        <!-- audio player  -->
+        <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro.min.css" />
+        <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-colors.min.css" />
+        <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-rtl.min.css" />
+        <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-icons.min.css" />
+        <!--  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body>
+        <section class="navi">
+            <div class="container">
+                <div class="navi-slogan">
+                    <img src="assets/images/slogan.png" alt="slogan" />
+                </div>
+                <div class="navi-content">
+                    <div>
+                        <ul class="navi-page">
+                            <li><a href="budget.html" class="btn">budgeting</a></li>
+                            <li><a href="saving.html" class="btn">saving</a></li>
+                            <li><a href="debt.html" class="btn">debt</a></li>
+                            <li><a href="investing.html" class="btn">investing</a></li>
+                            <li><a href="retirement.html" class="btn">retirement</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="navi-audio">
+                            <!-- icons  -->
+                            <div class="navi-audio__icon">
+                                <img src="assets/images/icons/radio.svg" alt="icon" />
+                            </div>
+                            <audio
+                                id="navi-audio-player"
+                                data-role="audio-player"
+                                data-src="https://metroui.org.ua/res/hotel_california.mp3"
+                                data-show-loop="false"
+                                data-show-stop="false"
+                                data-show-volume="false"
+                                data-show-info="false"
+                            ></audio>
+                            <h2 id="audio-title" class="text-truncate">Budegeting</h2>
+                        </div>
+                        <ul class="navi-playlist">
+                            <li class="active" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+                                <p>
+                                    <small>Budget - control your spending</small>
+                                    <small>Radio slot 1</small>
+                                </p>
+                                <span>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-play-circle"
+                                    >
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                                    </svg>
+                                </span>
+                            </li>
+                            <li data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3">
+                                <p>
+                                    <small>Saving - keep the money you make</small>
+                                    <small>Radio slot 2</small>
+                                </p>
+                                <span>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-play-circle"
+                                    >
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                                    </svg>
+                                </span>
+                            </li>
+                            <li data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3">
+                                <p>
+                                    <small>Debt - control the money you borrow</small>
+                                    <small>Radio slot 3</small>
+                                </p>
+                                <span>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-play-circle"
+                                    >
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                                    </svg>
+                                </span>
+                            </li>
+                            <li data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3">
+                                <p>
+                                    <small>Investing - let your money make more money</small>
+                                    <small>Radio slot 4</small>
+                                </p>
+                                <span>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-play-circle"
+                                    >
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                                    </svg>
+                                </span>
+                            </li>
+                            <li data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3">
+                                <p>
+                                    <small>Retirement - put money away for your golden years</small>
+                                    <small>Radio slot 5</small>
+                                </p>
+                                <span>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-play-circle"
+                                    >
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                                    </svg>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="assets/js/gsap.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- audio player -->
+        <script>
+            const naviPlaylists = document.querySelector(".navi-playlist").children;
+            const audioPlayer = document.querySelector("#navi-audio-player");
+            const audioTitle = document.querySelector("#audio-title");
+
+            [...naviPlaylists].forEach((naviPlaylist) => {
+                naviPlaylist.addEventListener("click", function (e) {
+                    const src = naviPlaylist.getAttribute("data-src");
+                    audioTitle.innerHTML = naviPlaylist.children[0].children[0].innerHTML;
+                    audioPlayer.setAttribute("src", src);
+                    audioPlayer.play();
+
+                    [...naviPlaylists].forEach((naviPlaylist) => {
+                        if (naviPlaylist.classList.contains("active")) {
+                            naviPlaylist.classList.remove("active");
+                        }
+                    });
+
+                    this.classList.add("active");
+                });
+            });
+        </script>
+    </body>
+</html>
